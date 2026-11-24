@@ -1,0 +1,52 @@
+---
+import { Navbar } from './Navbar';
+import { HeroLeft } from './HeroLeft';
+import { HeroVisual } from './HeroVisual';
+import BackgroundDecoration from './BackgroundDecoration.astro';
+---
+
+<div class="relative min-h-screen flex flex-col justify-between overflow-hidden bg-[#2C3531]">
+  {/* Atmospheric Background Grid & Glows */}
+  <BackgroundDecoration />
+
+  {/* Header & Minimal Navigation */}
+  <Navbar client:load />
+
+  {/* Hero Section Main Content */}
+  <main id="home" class="relative z-10 flex-1 flex items-center pt-24 sm:pt-28 pb-12 sm:pb-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+        {/* Left Column: Typography, Story, CTAs, Socials */}
+        <div class="lg:col-span-7 flex justify-center lg:justify-start">
+          <HeroLeft client:load />
+        </div>
+
+        {/* Right Column: Code & AI Interactive Engineering Canvas */}
+        <div class="lg:col-span-5 flex justify-center lg:justify-end">
+          <HeroVisual client:load />
+        </div>
+      </div>
+    </div>
+  </main>
+
+  {/* Subtle Bottom Scroll Indicator & Status Ticker */}
+  <div class="relative z-10 pb-6 hidden sm:flex items-center justify-between max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full text-xs font-mono text-[#D1E8E2]/40 select-none">
+    <div class="flex items-center gap-2">
+      <span class="inline-block w-2 h-2 rounded-full bg-[#116466]"></span>
+      <span class="text-[#D1E8E2]/60">STATUS: OPEN FOR NEW OPPORTUNITIES</span>
+    </div>
+
+    <a
+      href="#about"
+      class="flex items-center gap-2 text-[#D1E8E2]/50 hover:text-[#FFCB9A] transition-colors group"
+      aria-label="Scroll down to About section"
+    >
+      <span>SCROLL TO EXPLORE</span>
+      <span class="group-hover:translate-y-1 transition-transform duration-200">↓</span>
+    </a>
+
+    <div class="text-[#D9B08C]/60">
+      PORTFOLIO 2026 // v2.4
+    </div>
+  </div>
+</div>

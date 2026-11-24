@@ -1,11 +1,78 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import HeroSection from '../components/HeroSection.astro';
 ---
 
-<Layout>
-	<Welcome />
+<Layout 
+	title="Kamalesh | Frontend & AI Engineer"
+	description="Portfolio of Kamalesh, Fullstack Frontend Architect and AI Specialist building digital experiences with code and intelligence."
+>
+	{/* Hero Section */}
+	<HeroSection />
+
+	{/* Minimal Placeholder Sections for Navigation Anchor Targets */}
+	<section id="about" class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-[#D1E8E2]/10">
+		<div class="max-w-3xl">
+			<span class="font-mono text-xs uppercase tracking-widest text-[#FFCB9A]">01 // ABOUT</span>
+			<h2 class="font-sans font-bold text-3xl sm:text-4xl text-[#D1E8E2] mt-2 mb-6">
+				Engineering with Purpose & Precision
+			</h2>
+			<p class="text-[#D1E8E2]/80 leading-relaxed text-base sm:text-lg">
+				Specializing in the intersection of modern frontend architectures and applied artificial intelligence. Committed to creating high-performance, accessible, and intuitive digital interfaces that elevate user experiences.
+			</p>
+		</div>
+	</section>
+
+	<section id="skills" class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-[#D1E8E2]/10">
+		<div class="max-w-3xl">
+			<span class="font-mono text-xs uppercase tracking-widest text-[#FFCB9A]">02 // CAPABILITIES</span>
+			<h2 class="font-sans font-bold text-3xl sm:text-4xl text-[#D1E8E2] mt-2 mb-6">
+				Technical Stack & Domain Expertise
+			</h2>
+			<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 pt-4">
+				<div class="p-5 rounded-xl bg-[#2C3531] border border-[#116466]/40 hover:border-[#116466] transition-all">
+					<h3 class="font-mono font-semibold text-sm text-[#FFCB9A] mb-2">Frontend Architecture</h3>
+					<p class="text-xs text-[#D1E8E2]/70">React 19, Astro, Next.js, TypeScript, Tailwind CSS, State Management</p>
+				</div>
+				<div class="p-5 rounded-xl bg-[#2C3531] border border-[#116466]/40 hover:border-[#116466] transition-all">
+					<h3 class="font-mono font-semibold text-sm text-[#FFCB9A] mb-2">AI & Intelligence</h3>
+					<p class="text-xs text-[#D1E8E2]/70">LLM Prompting, Agentic Workflows, Neural UI, RAG Architectures</p>
+				</div>
+				<div class="p-5 rounded-xl bg-[#2C3531] border border-[#116466]/40 hover:border-[#116466] transition-all">
+					<h3 class="font-mono font-semibold text-sm text-[#FFCB9A] mb-2">Engineering & Core Vitals</h3>
+					<p class="text-xs text-[#D1E8E2]/70">100% Core Web Vitals, Accessibility (a11y), Edge Deployments, Clean Code</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="projects" class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-[#D1E8E2]/10">
+		<div class="max-w-3xl">
+			<span class="font-mono text-xs uppercase tracking-widest text-[#FFCB9A]">03 // WORK</span>
+			<h2 class="font-sans font-bold text-3xl sm:text-4xl text-[#D1E8E2] mt-2 mb-6">
+				Featured Engineering Projects
+			</h2>
+			<p class="text-[#D1E8E2]/80 leading-relaxed text-base">
+				Explore upcoming case studies showcasing performant web applications, AI-integrated workflows, and design systems.
+			</p>
+		</div>
+	</section>
+
+	<section id="contact" class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-[#D1E8E2]/10 mb-12">
+		<div class="max-w-3xl">
+			<span class="font-mono text-xs uppercase tracking-widest text-[#FFCB9A]">04 // CONNECT</span>
+			<h2 class="font-sans font-bold text-3xl sm:text-4xl text-[#D1E8E2] mt-2 mb-4">
+				Let's Build Something Exceptional
+			</h2>
+			<p class="text-[#D1E8E2]/80 leading-relaxed text-base mb-6">
+				Have an ambitious project or looking to collaborate? Reach out directly via email or connect on social platforms.
+			</p>
+			<a
+				href="mailto:kamalesh3847@gmail.com"
+				class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-[#116466] hover:bg-[#167e80] text-[#D1E8E2] font-semibold text-sm transition-all shadow-lg shadow-[#116466]/30"
+			>
+				<span>Get In Touch (kamalesh3847@gmail.com)</span>
+			</a>
+		</div>
+	</section>
 </Layout>
