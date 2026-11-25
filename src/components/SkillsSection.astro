@@ -1,0 +1,82 @@
+---
+import { portfolioData } from '../data/portfolioData';
+import { Code2, Cpu, Zap, Terminal } from 'lucide-react';
+
+const iconsMap: Record<string, any> = {
+  Code2,
+  Cpu,
+  Zap,
+  Terminal,
+};
+---
+
+<section id="skills" class="scroll-mt-24 py-28 relative border-t border-[#D1E8E2]/10 bg-[#28312d]/60">
+  {/* Ambient decorative lighting */}
+  <div
+    class="absolute top-1/2 right-10 -translate-y-1/2 w-[450px] h-[450px] bg-[#116466]/10 blur-[140px] pointer-events-none rounded-full"
+    aria-hidden="true"
+  ></div>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    {/* Section Header */}
+    <div class="max-w-3xl mb-16">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#116466]/20 border border-[#116466]/40 mb-4">
+        <span class="w-1.5 h-1.5 rounded-full bg-[#FFCB9A]"></span>
+        <span class="font-mono text-xs uppercase tracking-widest text-[#FFCB9A]">02 // CAPABILITIES</span>
+      </div>
+      <h2 class="font-sans font-bold text-3xl sm:text-4xl lg:text-5xl text-[#D1E8E2] tracking-tight leading-[1.18] mb-4">
+        Technical Stack & Domain Expertise
+      </h2>
+      <p class="text-[#D1E8E2]/85 text-base sm:text-lg font-normal leading-relaxed">
+        A balanced engineering toolkit spanning scalable frontend systems, machine intelligence interfaces, and edge performance optimization.
+      </p>
+    </div>
+
+    {/* 4 Domain Cards Grid */}
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+      {portfolioData.skillCategories.map((category) => {
+        const IconComponent = iconsMap[category.iconName] || Code2;
+        return (
+          <div class="p-7 rounded-2xl bg-[#2C3531]/95 border border-[#D1E8E2]/15 hover:border-[#116466] shadow-xl shadow-black/25 transition-all duration-300 group flex flex-col justify-between">
+            <div>
+              {/* Category Header */}
+              <div class="flex items-center gap-3.5 mb-4">
+                <div class="w-11 h-11 rounded-xl bg-[#116466]/30 border border-[#116466] flex items-center justify-center text-[#FFCB9A] group-hover:bg-[#116466] group-hover:text-[#D1E8E2] transition-colors duration-300">
+                  <IconComponent className="w-5 h-5" />
+                </div>
+                <div>
+                  <h3 class="font-sans font-bold text-lg text-[#D1E8E2] group-hover:text-[#FFCB9A] transition-colors">
+                    {category.title}
+                  </h3>
+                  <p class="font-mono text-xs text-[#D9B08C]">
+                    ENGINEERED DISCIPLINE
+                  </p>
+                </div>
+              </div>
+
+              <p class="text-sm text-[#D1E8E2]/75 leading-relaxed mb-6">
+                {category.description}
+              </p>
+            </div>
+
+            {/* Skill Tags Cloud */}
+            <div class="flex flex-wrap gap-2 pt-4 border-t border-[#D1E8E2]/10">
+              {category.skills.map((skill) => (
+                <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-[#242c29] border border-[#D1E8E2]/10 hover:border-[#116466]/60 transition-colors">
+                  <span class="font-sans text-xs font-medium text-[#D1E8E2]">
+                    {skill.name}
+                  </span>
+                  {skill.tag && (
+                    <span class="font-mono text-[10px] text-[#FFCB9A] opacity-75">
+                      {skill.tag}
+                    </span>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        );
+      })}
+    </div>
+  </div>
+</section>

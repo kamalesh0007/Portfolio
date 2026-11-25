@@ -1,0 +1,71 @@
+---
+import { portfolioData } from '../data/portfolioData';
+import { GithubIcon, LinkedinIcon } from './icons/SocialIcons';
+---
+
+<footer class="py-12 border-t border-[#D1E8E2]/10 bg-[#242c29]/90 relative z-10">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+      {/* Brand & Monogram */}
+      <div class="flex items-center gap-3">
+        <div class="w-8 h-8 rounded-lg bg-[#116466]/40 border border-[#116466] flex items-center justify-center font-mono font-bold text-sm text-[#FFCB9A]">
+          K
+        </div>
+        <div class="flex flex-col">
+          <span class="font-sans font-semibold text-sm text-[#D1E8E2]">
+            {portfolioData.personal.name}
+          </span>
+          <span class="font-mono text-[10px] text-[#D1E8E2]/50">
+            Frontend Architecture • Applied AI
+          </span>
+        </div>
+      </div>
+
+      {/* Tech Stack Attribution */}
+      <div class="font-mono text-xs text-[#D1E8E2]/60 text-center">
+        Engineered with <span class="text-[#FFCB9A]">Astro 5</span>, <span class="text-[#D9B08C]">React 19</span> & <span class="text-[#116466]">Tailwind CSS v4</span>
+      </div>
+
+      {/* Right: Back to Top & Socials */}
+      <div class="flex items-center gap-5">
+        <a
+          href="#home"
+          class="font-mono text-xs text-[#D1E8E2]/60 hover:text-[#FFCB9A] transition-colors"
+          aria-label="Back to Top"
+        >
+          ↑ TOP
+        </a>
+        <span class="text-[#D1E8E2]/20">|</span>
+        <a
+          href="https://github.com/kamalesh0007"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-[#D1E8E2]/60 hover:text-[#FFCB9A] transition-colors"
+          aria-label="GitHub"
+        >
+          <GithubIcon size={16} />
+        </a>
+        <a
+          href="https://linkedin.com/in/kamalesh"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-[#D1E8E2]/60 hover:text-[#FFCB9A] transition-colors"
+          aria-label="LinkedIn"
+        >
+          <LinkedinIcon size={16} />
+        </a>
+      </div>
+    </div>
+
+    {/* Bottom Legal / Status line */}
+    <div class="mt-8 pt-6 border-t border-[#D1E8E2]/5 flex flex-col sm:flex-row items-center justify-between text-[11px] font-mono text-[#D1E8E2]/40 gap-2">
+      <div>
+        © 2026 {portfolioData.personal.fullName}. All rights reserved.
+      </div>
+      <div class="flex items-center gap-2">
+        <span class="w-2 h-2 rounded-full bg-[#116466] animate-pulse"></span>
+        <span>ALL SYSTEMS NOMINAL // 100% WEB VITALS</span>
+      </div>
+    </div>
+  </div>
+</footer>
